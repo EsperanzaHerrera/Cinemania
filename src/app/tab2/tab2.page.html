@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Datos de Compra
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input>Nombre: </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input>Email: </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="Numeric">Cantidad Entradas: </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item>
+        <ion-label>Pelicula</ion-label>
+        <ion-select placeholder="Select One">
+          <ion-select-option value="dp">D. Pikachu</ion-select-option>
+          <ion-select-option value="av">Avengers</ion-select-option>
+          <ion-select-option value="lm">La Monja</ion-select-option>
+          <ion-select-option value="ll">la Llorona</ion-select-option>
+        </ion-select>
+      </ion-item>   
+    </ion-list>
+  <!----------------------------------------------------------------->
+  <ion-list>
+      <ion-item>
+          <ion-label>Agregar Combo</ion-label>
+          <ion-checkbox value="si"></ion-checkbox>
+        </ion-item>
+
+    <ion-radio-group>
+      <ion-item>
+        <ion-label>Combo 1</ion-label>
+        <ion-radio value="combo1"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Combo 2</ion-label>
+        <ion-radio value="combo2"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Combo 3</ion-label>
+        <ion-radio value="combo3"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+<!---------------------------------------------------------------------------------------------->
+<ion-button expand="block" color="tertiary" (click)="presentActionSheet()">Comprar</ion-button>
+</ion-content>
