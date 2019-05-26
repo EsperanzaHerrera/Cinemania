@@ -28,6 +28,7 @@
       <ion-item>
         <ion-label>Pelicula</ion-label>
         <ion-select placeholder="Select One">
+       
           <ion-select-option value="dp">D. Pikachu</ion-select-option>
           <ion-select-option value="av">Avengers</ion-select-option>
           <ion-select-option value="lm">La Monja</ion-select-option>
@@ -35,7 +36,26 @@
         </ion-select>
       </ion-item>   
     </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Asientos</ion-label>
+        <ion-select [(ngModel)]="toppings" multiple="true" cancelText="Cancelar" okText="Listo!">
+          <ion-select-option value="e4">E4</ion-select-option>
+          <ion-select-option value="e5">E5</ion-select-option>
+          <ion-select-option value="i8">I8</ion-select-option>
+          <ion-select-option value="z6">Z6</ion-select-option>
+        </ion-select>
+      </ion-item>   
+    </ion-list>
   <!----------------------------------------------------------------->
+  <ion-item>
+  <ion-label>socio</ion-label>
+  <ion-toggle ng-model="toggleInput.checked" ng-change="toggleInputChange()"></ion-toggle>
+  <ion-label>descuento</ion-label>
+  <ion-input ng-disabled="!toggleInput.checked" type="text" ng-model="userInput.value" placeholder="{{toggleInput.checked ? 'This is the user input...' : 'Not Applicable' }}"></ion-input>
+</ion-item>
+
   <ion-list>
       <ion-item>
           <ion-label>Agregar Combo</ion-label>
